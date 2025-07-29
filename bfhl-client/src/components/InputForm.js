@@ -10,7 +10,7 @@ function InputForm({ onResponse }) {
     const formatted = input.split(',').map(el => el.trim().replace(/['"]+/g, ''));
     setLoading(true);
     try {
-      const res = await axios.post('http://localhost:5000/bfhl', {
+      const res = await axios.post('https://bajaj-assignment-x5cv.onrender.com/bfhl', {
         data: formatted
       });
       onResponse(res.data);
